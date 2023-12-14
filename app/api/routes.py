@@ -28,7 +28,7 @@ def create_contact(current_user_token):
     response = contact_schema.dump(contact)
     return jsonify(response)
 
-@api.route('/contact', methods = ['GET'])
+@api.route('/contacts', methods = ['GET'])
 @token_required
 def get_contact(current_user_token):
     a_user = current_user_token.token
